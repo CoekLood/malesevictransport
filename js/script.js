@@ -33,3 +33,13 @@ const observer = new IntersectionObserver(onIntersection, {
 
 const obj = document.getElementById("numberjs1");
 observer.observe(obj);
+
+
+function burgerAnimation(x) {
+  x.classList.toggle("change");
+}
+
+function toggleMenu() {
+  var menu = document.getElementById('burgerMenu');
+  menu.classList.toggle('open');
+}

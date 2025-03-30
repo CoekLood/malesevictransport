@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -9,9 +10,81 @@ body{
     font-family: "Montserrat", sans-serif;
     height:100%;
     width:100%;
+    overflow-x: hidden
     
 }
 
+.burgerMenu {
+    position: fixed;
+    top: 0;
+    left: -300px;  /* Initially off-screen */
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    transition: left 0.3s ease-in-out;
+    z-index: 1;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.burgerMenu img {
+    align-self: center; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.burgerMenu ul {
+    margin-top: 170px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.burgerMenu ul li {
+    padding: 8px 16px;
+    text-align: left;
+}
+
+.burgerMenu ul li a {
+    color:#612828;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.burgerMenu ul li a:hover {
+    background-color: #f1f1f1;  /* Hover effect */
+}
+
+.burgerMenu.open {
+    left: 0;  /* Menu becomes visible when open */
+}
+
+.burgerIcon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
 nav {
     max-width: 1083px;
     width: 100%;
@@ -21,8 +94,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
-    padding: 0 60px;
+    padding: 0 40px;
     border-radius: 20px;
+    min-width: 270px;
 
 }
 .logo{
@@ -48,6 +122,11 @@ nav .navElements ul {
 .navElements ul li {
     cursor: pointer;
     position: relative;
+}
+
+.navElements ul li a{
+    text-decoration: none;
+    color:#612828
 }
 
 .navElements ul li:after {
@@ -274,4 +353,29 @@ nav .navElements ul {
     margin: 60px 0 0 0;
     text-align: center;
     font-size: 15px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px){
+    .container{
+        /* border: 1px solid red; */
+    }
+    nav .navElements {
+        display: none;
+    }
+    nav .burgerMenu {
+        display: flex;
+    }
+    .burgerIcon {
+        display: inline-block;
+    }
+    .herosec .sidetext {
+        margin-right: -20px;
+    }
+    .herosec .sidetext p {
+        max-width: 350px;
+        font-size: 35px;
+    }
+
 }

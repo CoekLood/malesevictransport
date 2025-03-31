@@ -236,13 +236,14 @@ nav .navElements ul {
     max-width: 300px;
     padding:20px 10px;
     border-radius: 20px;
+    color:#3E2727;
 }
 .section2 .saznajvisebtn {
     background-color: #B76161;
     color: white;
     display: flex;
     border:none;
-    padding:3px 20px;
+    padding:8px 25px;
     border-radius: 10px;
     align-items: center;
     font-size: 18px;
@@ -260,8 +261,9 @@ nav .navElements ul {
 .section2 .card p{
     font-size: 28px;
     text-align: center;
+    line-height: 1.2;
     margin-bottom: 30px;
-    font-weight: 480;
+    font-weight: 500;
 }
 
 .section2 .card .img {
@@ -287,7 +289,7 @@ nav .navElements ul {
     display: flex;
     background-color: #B76161;
     align-items: center;
-    margin: 70px 0;
+    margin: 100px 0;
     padding: 20px 35px;
     max-width: 250px;
     color: white;
@@ -346,6 +348,7 @@ nav .navElements ul {
 .footer .img {
     user-select: none;
     pointer-events: none;
+    margin-bottom:-35px;
 }
 
 .footer .copyright p{
@@ -378,7 +381,14 @@ nav .navElements ul {
     nav{
         width:70%;
     }
-
+    .section3 .card:nth-child(1),
+    .section3 .card:nth-child(2){
+        margin-bottom: 2px;
+    }
+    .section3 .card:nth-child(3),
+    .section3 .card:nth-child(4){
+        margin-top:2px;
+    }
 }
 
 @media screen and (max-width: 570px) {
@@ -444,11 +454,22 @@ nav .navElements ul {
     .footer {
         padding-top:80px;
     }
-    
+    .footer img {
+        width:200px;
+    }
 }
 
 @media (max-width: 576px) {
     .section3 .container {
         grid-template-columns: 1fr; 
+    }
+    .footer img {
+        width: 200px;
+    }
+    .section3 .card{
+        margin:0;
+    }
+    .section3 {
+        padding:20px 0;
     }
 }

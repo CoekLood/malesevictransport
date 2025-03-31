@@ -10,8 +10,8 @@ body{
     font-family: "Montserrat", sans-serif;
     height:100%;
     width:100%;
-    overflow-x: hidden
-    
+    overflow-x: hidden;
+    min-width: 600px;
 }
 
 .burgerMenu {
@@ -96,7 +96,7 @@ nav {
     margin-top: 50px;
     padding: 0 40px;
     border-radius: 20px;
-    min-width: 270px;
+    min-width: 100px;
 
 }
 .logo{
@@ -371,11 +371,87 @@ nav .navElements ul {
         display: inline-block;
     }
     .herosec .sidetext {
-        margin-right: -20px;
+        align-items: center;
     }
     .herosec .sidetext p {
-        max-width: 350px;
-        font-size: 35px;
+        max-width: 300px;
+        font-size: 32px;
+        margin-right:20px;
+    }
+    nav{
+        width:70%;
     }
 
+}
+
+@media screen and (max-width: 570px) {
+    nav{
+        width: 70%;
+        margin-right:50px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    nav{
+        width: 60%;
+        margin-right:100px;
+    }
+    .prioritetisection .sidetext p{
+        width: 450px !important;
+    }
+    
+}
+
+@media screen and (max-width:1024px) {
+    .prioritetisection {
+        flex-direction: column;
+        align-items: center;
+    }
+    .prioritetisection .sidetext h1 {
+        font-size: 52px;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    .prioritetisection .sidetext p {
+        font-size: 20px;
+        width:500px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section2 .card{
+        margin:30px auto;
+    }
+    .section3 .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .section3 .card {
+        /* margin:50px 0; */
+        max-width: none;
+    }
+    .section3 .container {
+        max-width: none;
+    }
+
+    .footer p,
+    .footer ul li {
+        font-size: 14px; /* Adjust the font size as needed */
+    }
+    .footer h1{
+        font-size: 20px;
+    }
+    .footer {
+        padding-top:80px;
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .section3 .container {
+        grid-template-columns: 1fr; 
+    }
 }

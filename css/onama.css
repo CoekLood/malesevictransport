@@ -168,7 +168,7 @@ nav .navElements ul {
     left: 0;
     right:0;
     bottom: 0;
-    background-image: url('../img/herobg.png');
+    background-image: url('../img/onamahero.png');
     background-size: cover;
     background-position: center;
     filter: brightness(0.5);
@@ -193,119 +193,100 @@ nav .navElements ul {
     text-align: center;
 }
 
-.prioritetisection {
-    padding: 100px 0;
-}
-.prioritetisection .sidetext h1{
-    color: #B76161;
-    font-size: 64px;
-    font-weight:500;
-    margin-bottom:30px;
-}
-
-.prioritetisection .sidetext p{
-    font-size: 24px;
-    width: 585px;
-}
-
-.prioritetisection .sidetext p span{
-    color: #B76161;
-}
-
-.prioritetisection .sideimage {
-    pointer-events: none;
-    user-select: none;
-}
-
 .section2 {
-    background-image: 
-        linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(183,97,97,1) 100%),
-        url('../img/section2bg.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
+    padding: 100px 0;
     display: flex;
-    justify-content: center;
-}
-.section2 .card {
     flex-direction: column;
-    display: flex;
-    align-items: center;
-    margin:50px 20px;
-    max-width: 300px;
-    padding:20px 10px;
-    border-radius: 20px;
-}
-.section2 .saznajvisebtn {
-    background-color: #B76161;
-    color: white;
-    display: flex;
-    border:none;
-    padding:3px 20px;
-    border-radius: 10px;
-    align-items: center;
-    font-size: 18px;
 }
 
-.section2 .col-md-6:first-child {
-    display: flex;
-    justify-content: end;
-}
-.section2 .col-md-6{
-    display: flex;
-    justify-content: start;
-}
-
-.section2 .card p{
-    font-size: 28px;
+.section2 h1{
+    width: 100%;
     text-align: center;
-    margin-bottom: 30px;
-    font-weight: 480;
 }
 
-.section2 .card .img {
+.section2 h1 span{
+    color:#B76161
+}
+
+
+.section2 .row {
+    display: flex;
+    width: 100%;
+    justify-content: center; /* Ensures the columns are centered */
+    gap: 30px; /* Adds some space between the two columns */
+    margin-top:80px;
+  }
+  
+.col-md6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    flex: 1; /* Makes both columns equal in width */
+    padding: 0 15px; /* Optional: Add padding between columns */
+}
+  
+.section2 img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 500px; /* Optional: Prevents the image from becoming too large */
     user-select: none;
     pointer-events: none;
-}
-
-.section2 .card .saznajvisebtn:hover{
-    background-color: #612828;
-
 }
 
 .section3 {
+    width: 100%;
+    height: 500px; /* Ensure the section has a height (adjust as needed) */
     display: flex;
+    justify-content: space-between;
+    position: relative; /* Positioning context for the pseudo-element */
+    padding: 0 20px; /* Optional: Padding for spacing */
+    background: url('../img/onamasection3.png') center/cover no-repeat, rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay; /* Blend the image with the overlay */
 }
 
 .section3 .container {
     display: flex;
+    width: 100%;
     justify-content: space-between;
-}
-
-.section3 .card {
-    display: flex;
-    background-color: #B76161;
     align-items: center;
-    margin: 70px 0;
-    padding: 20px 35px;
-    max-width: 250px;
-    color: white;
-    border-radius: 12px;
+}
+.section3 .container h1{
+    font-size: 70px;
+    color: #B76161;
 }
 
-.section3 .card p{
-    font-size: 24px;
+.levitekst, .desnitekst {
+    width: 40%; /* Adjust the width as needed */
     text-align: center;
+    font-weight: 600;
+    color: white;
 }
 
-.section3 .card h6{
-    font-size: 36px;
-    margin-top:10px;
+.levitekst h1, .desnitekst h1 {
+    margin-bottom: 10px;
 }
 
-.section3 .card h6:before{
-    content:'+';
+.levitekst p, .desnitekst p {
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+span {
+    color:#B76161;
+}
+
+.section4 {
+    padding: 120px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section4 img {
+    user-select: none;
+    pointer-events: none;
+}
+.section4 p{
+    font-size: 22px;
 }
 
 .footer {
@@ -353,102 +334,4 @@ nav .navElements ul {
     margin: 60px 0 0 0;
     text-align: center;
     font-size: 15px;
-}
-
-/* Responsive */
-
-@media screen and (max-width: 768px){
-    nav .navElements {
-        display: none;
-    }
-    nav .burgerMenu {
-        display: flex;
-    }
-    .burgerIcon {
-        display: inline-block;
-    }
-    .herosec .sidetext {
-        align-items: center;
-    }
-    .herosec .sidetext p {
-        max-width: 300px;
-        font-size: 32px;
-        margin-right:20px;
-    }
-    nav{
-        width:70%;
-    }
-
-}
-
-@media screen and (max-width: 570px) {
-    nav{
-        width: 70%;
-        margin-right:50px;
-    }
-}
-
-@media screen and (max-width: 540px) {
-    nav{
-        width: 60%;
-        margin-right:100px;
-    }
-    .prioritetisection .sidetext p{
-        width: 450px !important;
-    }
-    
-}
-
-@media screen and (max-width:1024px) {
-    .prioritetisection {
-        flex-direction: column;
-        align-items: center;
-    }
-    .prioritetisection .sidetext h1 {
-        font-size: 52px;
-    }
-
-}
-
-@media screen and (max-width: 640px) {
-    .prioritetisection .sidetext p {
-        font-size: 20px;
-        width:500px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .section2 .card{
-        margin:30px auto;
-    }
-    .section3 .container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    .section3 .card {
-        /* margin:50px 0; */
-        max-width: none;
-    }
-    .section3 .container {
-        max-width: none;
-    }
-
-    .footer p,
-    .footer ul li {
-        font-size: 14px; /* Adjust the font size as needed */
-    }
-    .footer h1{
-        font-size: 20px;
-    }
-    .footer {
-        padding-top:80px;
-    }
-    
-}
-
-@media (max-width: 576px) {
-    .section3 .container {
-        grid-template-columns: 1fr; 
-    }
 }

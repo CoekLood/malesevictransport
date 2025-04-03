@@ -1,43 +1,44 @@
+// server.js
 const express = require('express');
-const axios = require('axios');
-require('dotenv').config(); // Load environment variables
+const bodyParser = require('body-parser');
+const emailjs = require('emailjs-com'); // EmailJS SDK
+require('dotenv').config(); // To load environment variables
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.use(express.json()); // For parsing JSON body
+// Middleware to parse JSON requests
+app.use(bodyParser.json());
 
-// Route to handle form submission
-app.post('/send-email', async (req, res) => {
+// EmailJS configuration (using environment variables to hide API keys)
+const { EMAILJS_USER_ID, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID } = process.env;
+
+// POST route to handle form submission
+app.post('/send-email', (req, res) => {
     const { name, phone, email, address, message } = req.body;
 
+    // Prepare the parameters to send to EmailJS
     const params = {
-        service_id: process.env.EMAILJS_SERVICE_ID, // Using environment variable
-        template_id: process.env.EMAILJS_TEMPLATE_ID, // Using environment variable
-        user_id: process.env.EMAILJS_USER_ID, // Using environment variable
-        template_params: {
-            name,
-            phone,
-            email,
-            address,
-            message
-        }
+        name,
+        phone,
+        email,
+        address,
+        message,
     };
 
-    try {
-        // Sending request to EmailJS API
-        const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', params, {
-            headers: {
-                'Content-Type': 'application/json'
-            }
+    // Send the email using EmailJS
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params, EMAILJS_USER_ID)
+        .then(response => {
+            console.log('SUCCESS!', response.status, response.text);
+            res.status(200).json({ success: true, message: 'Email sent successfully!' });
+        })
+        .catch(error => {
+            console.error('FAILED...', error);
+            res.status(500).json({ success: false, message: 'Failed to send email' });
         });
-        res.status(200).json({ message: 'Email sent successfully!' });
-    } catch (error) {
-        console.error('Email sending failed:', error);
-        res.status(500).json({ message: 'Failed to send email' });
-    }
 });
 
+// Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });

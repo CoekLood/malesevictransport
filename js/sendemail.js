@@ -33,24 +33,26 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         message: document.getElementById('message').value,
     };
 
-    // Send the form data to the backend (Node.js server)
-    fetch('http://localhost:3000/send-email', {
+    // Send the form data to the Back4App backend
+    fetch('https://parseapi.back4app.com/functions/sendEmail', {  // Use your Back4App URL here
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'X-Parse-Application-Id': '0GZAedEXoy6NFwUkwAonglsDnFukt0lq084uf9DQ',  // Replace with your Back4App App ID
+            'X-Parse-REST-API-Key': 'KwAtGpOLDAoDfhbQDZmPtJQ6fBposX36oubksTrz',  // Replace with your Back4App REST API Key
         },
-        body: JSON.stringify(params)
+        body: JSON.stringify(params),
     })
     .then(response => response.json())
     .then(data => {
         if (data.success) {
             alert('Email sent successfully!');
         } else {
-            alert('Failed to send email.');
+            alert('Error sending email: ' + data.message);
         }
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('An error occurred while sending the email.');
+        alert('Error sending email');
     });
 });

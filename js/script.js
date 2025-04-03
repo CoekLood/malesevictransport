@@ -54,6 +54,5 @@ function handleResize() {
     burgerIcon.classList.remove('change'); // Remove the animation from the burger icon
   }
 }
-
 // Listen for window resize and run handleResize function
 window.addEventListener('resize', handleResize);

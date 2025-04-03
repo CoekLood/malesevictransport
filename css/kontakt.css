@@ -1,0 +1,413 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: gray;
+    font-family: "Montserrat", sans-serif;
+    height:100%;
+    width:100%;
+    overflow-x: hidden;
+    min-width: 600px;
+}
+
+.burgerMenu {
+    position: fixed;
+    top: 0;
+    left: -300px;  /* Initially off-screen */
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    transition: left 0.3s ease-in-out;
+    z-index: 1;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.burgerMenu img {
+    align-self: center; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.burgerMenu ul {
+    margin-top: 170px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.burgerMenu ul li {
+    padding: 8px 16px;
+    text-align: left;
+}
+
+.burgerMenu ul li a {
+    color:#612828;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.burgerMenu ul li a:hover {
+    background-color: #f1f1f1;  /* Hover effect */
+}
+
+.burgerMenu.open {
+    left: 0;  /* Menu becomes visible when open */
+}
+
+.burgerIcon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+nav {
+    max-width: 1083px;
+    width: 100%;
+    height: 104px;;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding: 0 40px;
+    border-radius: 20px;
+    min-width: 100px;
+
+}
+.logo{
+    margin-top:-140px;
+}
+
+nav .navElements {
+    margin-top:20px;
+}
+nav .navElements ul {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    gap:60px;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 22px;
+    color: #612828;
+    overflow: hidden;
+    padding-bottom:5px;
+}
+
+.navElements ul li {
+    cursor: pointer;
+    position: relative;
+}
+
+.navElements ul li a{
+    text-decoration: none;
+    color:#612828
+}
+
+.navElements ul li:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0; 
+    left: 50%; 
+    width: 0; 
+    height: 3px; 
+    background: #612828;
+    transition: width 0.5s ease;
+    transform: translateX(-50%);
+}
+
+.navElements ul li:hover:after {
+    width: 100%;
+}
+
+.herosec img{
+    z-index: 0;
+    position: absolute;
+    background-size: cover;
+}
+
+.herosec {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.herosec::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background-image: url('../img/uslugebg.png');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    z-index: -1;
+}
+.herosec .sidetext {
+    display: flex;
+    justify-content: flex-end;
+    margin-right:100px;
+}
+.herosec .container {
+    margin:auto 0;
+}
+.herosec .sidetext p {
+    color:white;
+    background-color: #B76161;
+    font-size: 40px;
+    font-weight: 500;
+    padding:20px 40px;
+    max-width: 450px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.forma {
+    background-color: #B76161;
+    margin:180px 0;
+    padding: 100px 0;
+    border-radius: 25px;
+}
+
+.forma .input-group img {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.forma .input-group {
+    position: relative;
+    width:350px;
+    padding-bottom:5px;
+    border-bottom: 3px solid white;
+    margin-top:25px;
+}
+
+.forma .col-md-6:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.forma .col-md-6:nth-child(1) h1 {
+    font-size: 52px;
+    margin-right:160px;
+    margin-bottom: 20px;
+
+}
+.forma h1{
+    color: white;
+}
+.forma .input-group input, 
+.forma .input-group textarea {
+    background-color: transparent;
+    border: none;
+    padding-left: 70px;  /* Space for the icon */
+    font-size: 18px;
+    padding-top: 20px;   /* Space for the placeholder text */
+    transition: all 0.3s ease; /* Smooth transition for focus effect */
+}
+.forma .input-group input:focus,
+.forma .input-group textarea:focus {
+    box-shadow: none;
+}
+.forma .input-group textarea {
+    padding-left: 70px; /* Space for the icon */
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+.forma .input-group input::placeholder,
+.forma textarea::placeholder {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.editImage {
+    width: 40px;
+    height: 40px;
+}
+
+.forma .submitBtn {
+    color:#B76161;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top:50px;
+    padding:6px 50px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.forma .submitBtn:hover {
+    cursor: pointer;
+}
+.forma .input-group label {
+    position: absolute;
+    left: 70px;         /* Space for the icon */
+    top: 34px;          /* Center the label vertically initially */
+    transform: translateY(-50%);
+    font-size: 18px;    /* Initial label size */
+    color: rgba(255, 255, 255, 0.5); /* Light gray color */
+    transition: all 0.3s ease; /* Smooth transition for label movement */
+}
+
+/* Floating label style when input or textarea has content */
+.forma .input-group input.has-content + label,
+.forma .input-group textarea.has-content + label,
+.forma .input-group input:focus + label,
+.forma .input-group textarea:focus + label {
+    font-size: 12px;
+    top: -5px;
+    left: 70px;
+    color:#612828;
+}
+
+
+/* Ensure label remains floated when there is content */
+.forma .input-group input:not(:focus):not(:empty) + label,
+.forma .input-group textarea:not(:focus):not(:empty) + label {
+    font-size: 12px;
+    top: -5px;
+    left: 70px;
+    color:#612828;
+}
+.forma .col-md-6:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forma .col-md-6:nth-child(2) h1{
+    margin-right:40px;
+    font-size: 52px;
+}
+
+.section{
+    width: 300px;
+    display: flex;
+    gap:35px;
+    align-items: center;
+    padding-bottom: 30px;
+    margin-top: 34px;
+    border-bottom: 3px solid white;
+}
+
+.section p{
+    color:white;
+    font-size: 18px;
+    margin-top:15px;
+}
+
+.forma .row {
+    position: relative;
+}
+.forma .row::before {
+    content: '';                  /* Creates an empty content box */
+    position: absolute;           /* Position the line absolutely */
+    top: 0;                        /* Start at the top of the container */
+    left: 50%;                     /* Center the line between the columns */
+    transform: translateX(-50%);   /* Move the line exactly to the center */
+    width: 2px;                   /* Set the width of the line */
+    height: 100%;                  /* Make it span the entire height of the container */
+    background-color: #A14E4E;    /* Color of the vertical line */
+    z-index: 1;                   /* Ensure the line is above the background */
+}
+
+.footer {
+    background-color: #B76161;
+    color:white;
+    padding-top: 120px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .sec1 {
+    margin-top:-45px;
+}
+
+.footer p,
+.footer ul li{
+    font-size: 18px;
+}
+
+.footer ul li{
+    margin-top: 15px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.footer ul li:hover {
+    text-decoration: underline;
+}
+
+.footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer .img {
+    user-select: none;
+    pointer-events: none;
+    margin-bottom:-35px;
+}
+
+.footer .copyright p{
+    padding:0;
+    margin: 60px 0 0 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: none;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+};
+

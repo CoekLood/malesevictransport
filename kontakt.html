@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Malesevic Transport</title>
+        <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/kontakt.css">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "z8D9obw7eUEhSunjQ",
+            });
+        })();
+        </script>
+    </head>
+<body>
+    <div class="herosec">
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="./img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="burgerIcon" onclick="burgerAnimation(this), toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="burgerMenu" id="burgerMenu">
+                <img src="./img/logo.png" alt="Logo">
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="onama.html">O nama</a></li>
+                    <li><a href="#">Usluge</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="navElements">
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="onama.html">O nama</a></li>
+                    <li><a href="#">Usluge</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="sidetext">
+                <p>Kontaktirajte nas!</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="forma">
+            <div class="row">
+                <!-- Left Column: Form -->
+                <div class="col-md-6">
+                    <h1>Kontakt</h1>
+                    <form id="contact-form">
+                        <div class="input-group">
+                            <img src="./img/usericon.png" alt="usericon">
+                            <input type="text" class="form-control" id="name" required>
+                            <label for="name">Ime i Prezime</label>
+                        </div>
+                        <div class="input-group">
+                            <img src="./img/callicon.png" alt="callicon">
+                            <input type="text" class="form-control" id="phone" required>
+                            <label for="phone">Broj Telefona</label>
+                        </div>
+                        <div class="input-group">
+                            <img src="./img/emailicon.png" alt="emailicon">
+                            <input type="email" class="form-control" id="email" required>
+                            <label for="email">E-mail adresa</label>
+                        </div>
+                        <div class="input-group">
+                            <img src="./img/addressicon.png" alt="addressicon">
+                            <input type="text" class="form-control" id="address" required>
+                            <label for="address">Adresa</label>
+                        </div>
+                        <div class="input-group">
+                            <img class="editImage" src="./img/chaticon.png" alt="chaticon" width="40px">
+                            <textarea class="form-control" id="message" rows="2" required></textarea>
+                            <label for="message">Poruka</label>
+                        </div>
+                        <input class="submitBtn" type="submit" value="Pošalji">
+                        
+                    </form>
+                </div>
+                
+                
+                <!-- Right Column: Information -->
+                <div class="col-md-6">
+                    <h1>Informacije</h1>
+
+                    <div class="section">
+                        <img src="./img/addressicon.png" alt="addressicon" width="40px" height="40px">
+                        <p>Ul. Savski venac 8,<br>
+                            11300 Beograd, Srbija</p>
+                    </div>
+                    <div class="section">
+                        <img src="./img/callicon.png" alt="callicon" width="40px" height="40px">
+                        <p>(+381) 61 431 4432</p>
+                    </div>
+                    <div class="section">
+                        <img src="./img/emailicon.png" alt="emailicon" width="40px" height="40px">
+                        <p>office@malesevic.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="sec1">
+                <div class="img"><img src="./img/logo2.png" alt="logo"></div>
+                <p>E-mail: office@malesevic.com</p>
+                <p>Telefon: +381 63 432 12 00</p>
+                <p>(8-17h radnim danima)</p>
+            </div>
+            <div class="sec2">
+                <h1>Korisne Informacije</h1>
+                <ul>
+                    <li><a href="#">Opšti uslovi poslovanja</a></li>
+                    <li><a href="#">Dali ste znali?</a></li>
+                    <li><a href="#">Uslovi korišcenja</a></li>
+                    <li><a href="#">Korisni linkovi</a></li>
+                </ul>
+            </div>
+            <div class="sec3">
+                <h1>Stranice</h1>
+                <ul>
+                    <li><a href="onama.html">O nama</a></li>
+                    <li><a href="#">Usluge</a></li>
+                    <li><a href="#">Prijave za posao</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2025 Malešević d.o.o. All rights reserved.</p>
+        </div>
+    </div>
+    <script src="./js/kontakt.js"></script>
+    <script src="./js/sendemail.js"></script>
+</body>
+</html>

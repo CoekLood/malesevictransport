@@ -3,6 +3,8 @@
     padding:0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    outline: 1px red solid !important; 
+    visibility: visible !important
 }
 
 html {
@@ -180,14 +182,18 @@ nav .navElements ul {
     filter: brightness(0.5);
     z-index: -1;
 }
+.herosec .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    flex:1;
+}
 .herosec .sidetext {
     display: flex;
-    justify-content: flex-end;
-    margin-right:100px;
 }
-.herosec .container {
-    margin:auto 0;
-}
+
+
 .herosec .sidetext p {
     color:white;
     background-color: #B76161;

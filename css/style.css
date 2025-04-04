@@ -12,6 +12,8 @@ body{
     width:100%;
     overflow-x: hidden;
     min-width: 600px;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
 }
 
 .burgerMenu {

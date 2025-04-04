@@ -8,7 +8,6 @@
 }
 
 html {
-    width: 100% !important; 
     border:4px solid blue;
 }
 
@@ -17,7 +16,6 @@ body{
     font-family: "Montserrat", sans-serif;
     height:100%;
     overflow-x: hidden;
-
 }
 
 .burgerMenu {

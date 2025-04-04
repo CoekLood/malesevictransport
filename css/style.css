@@ -5,6 +5,11 @@
     scroll-behavior: smooth;
 }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body{
     background-color: gray;
     font-family: "Montserrat", sans-serif;
@@ -12,8 +17,7 @@ body{
     width:100%;
     overflow-x: hidden;
     min-width: 600px;
-    overflow-y: scroll; /* has to be scroll, not auto */
-    -webkit-overflow-scrolling: touch;
+
 }
 
 .burgerMenu {

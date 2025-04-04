@@ -3,13 +3,8 @@
     padding:0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    outline: 1px red solid !important; 
-    visibility: visible !important
 }
 
-html {
-    border:4px solid blue;
-}
 
 body{
     background-color: gray;

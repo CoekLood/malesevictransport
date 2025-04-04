@@ -203,6 +203,7 @@ nav .navElements ul {
 
 .prioritetisection {
     padding: 100px 0;
+    display: none !important;
 }
 .prioritetisection .sidetext h1{
     color: #B76161;
@@ -417,16 +418,6 @@ nav .navElements ul {
     
 }
 
-@media screen and (max-width:1024px) {
-    .prioritetisection {
-        flex-direction: column;
-        align-items: center;
-    }
-    .prioritetisection .sidetext h1 {
-        font-size: 52px;
-    }
-
-}
 
 @media screen and (max-width: 640px) {
     .prioritetisection .sidetext p {

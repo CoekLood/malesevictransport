@@ -203,7 +203,9 @@ nav .navElements ul {
 
 .prioritetisection {
     padding: 100px 0;
-    display: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .prioritetisection .sidetext h1{
     color: #B76161;
@@ -224,6 +226,7 @@ nav .navElements ul {
 .prioritetisection .sideimage {
     pointer-events: none;
     user-select: none;
+    width: 460px;
 }
 
 .section2 {

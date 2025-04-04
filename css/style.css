@@ -475,3 +475,39 @@ nav .navElements ul {
         padding:20px 0;
     }
 }
+
+
+
+/* Default: Extra-small devices such as small phones (less than 640px) */
+
+/* Small devices such as large phones (640px and up) */
+@media only screen and (min-width: 640px) {
+    .prioritetisection .sidetext,
+    .prioritetisection .sideimage {
+        width: calc(100%-40%)
+    }
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 768px) {
+    .prioritetisection .sidetext,
+    .prioritetisection .sideimage {
+        width: calc(100%-20%)
+    }
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 1024px) {
+    .prioritetisection .sidetext,
+    .prioritetisection .sideimage {
+        width: calc(100%-15%)
+    }
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 1280px) {
+    .prioritetisection .sidetext,
+    .prioritetisection .sideimage {
+        width: calc(100%-5%)
+    }
+}

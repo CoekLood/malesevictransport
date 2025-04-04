@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">        <title>Malesevic Transport</title>
+        <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/prijavazaposao.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="herosec">
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="./img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="burgerIcon" onclick="burgerAnimation(this), toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="burgerMenu" id="burgerMenu">
+                <img src="./img/logo.png" alt="Logo">
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="onama.html">O nama</a></li>
+                    <li><a href="usluge.html">Usluge</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="navElements">
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="onama.html">O nama</a></li>
+                    <li><a href="usluge.html">Usluge</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="sidetext">
+                <p>Prijavite se za posao vozača</p>
+            </div>
+        </div>
+    </div>
+    <div class="section2">
+        <div class="container">
+            <h1 class="header">Tražimo <span>odgovorne vozače</span> kombija za transport<br> robe. Popunite prijavu i pridružite se našem timu!</h1>
+            <h1 class="header2" id="header1">Pridruži se timu Malešević Transporta!</h1>
+            <p>Ako tražiš priliku da postaneš deo dinamične i profesionalne transportne kompanije, na pravom si mestu. Malešević Transport konstantno širi svoj tim posvećenih vozača i logističara koji dele našu strast za pouzdanim i efikasnim prevozom robe.</p>
+            <h1 class="header2">Šta tražimo?</h1>
+            <ul>
+                <li>Odgovorne i motivisane osobe spremne za timski rad</li>
+                <li>Profesionalan pristup poslu i poštovanje dogovorenih rokova</li>
+                <li>Vozačku dozvolu odgovarajuće kategorije</li>
+                <li>Iskustvo u transportu je poželjno, ali nije neophodno – spremni smo da podržimo tvoj razvoj</li>
+            </ul>
+            <h1 class="header2">Šta nudimo?</h1>
+            <ul>
+                <li>Stabilno zaposlenje i redovna primanja</li>
+                <li>Priliku za profesionalno usavršavanje</li>
+                <li>Podršku iskusnog tima i prijateljsku radnu atmosferu</li>
+            </ul>
+            <p id="p2">Ako želiš da postaneš deo našeg tima i doprineseš rastu i uspehu Malešević Transporta, pošalji nam svoj CV na office@malesevic.com ili nas kontaktiraj putem formulara ispod. Radujemo se tvojoj prijavi! </p>
+            <div class="prijava">
+                <h1>PRIJAVA</h1>
+                <div class="prijava2">
+                    <div class="left">
+                        <input class="inputfield" placeholder="Ime i Prezime" type="text">
+                        <input class="inputfield" id="input2" placeholder="Broj Telefona" type="text">
+                        <div class="iskustvo">
+                            <p>Godine iskustva u voznji</p>
+                            <input class="input3" id="input3" type="number">
+                        </div>
+                        <p>CV (biografija)</p>
+                        <input id="input4" type="file" value="" accept=".pdf, .doc, .docx">
+                        <label for="input4">Upload</label>
+                        <p id="files">*pdf,doc,docx</p>
+                    </div>
+                    <div class="right">
+                        <input class="inputfield" id="input6" placeholder="E-mail adresa" type="text">
+                        <input class="inputfield" id="input7" placeholder="Grad/Regija" type="text">
+                        <input class="inputfield" id="input5" placeholder="Dodatne vestine ili sertifikati" type="text">
+                        <p>Propratno pismo<span>opciono</span></p>
+                        <input id="input8" type="file" value="" accept=".doc, .docx, .pdf, .txt">
+                        <label for="input8">Upload</label>
+                        <p id="files">*doc,docx,pdf,txt</p>
+                    </div>
+                </div>
+                <button class="submitforma">Nastavi</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="sec1">
+                <div class="img"><img src="./img/logo2.png" alt="logo"></div>
+                <p>E-mail: office@malesevic.com</p>
+                <p>Telefon: +381 63 432 12 00</p>
+                <p>(8-17h radnim danima)</p>
+            </div>
+            <div class="sec2">
+                <h1>Korisne Informacije</h1>
+                <ul>
+                    <li><a href="#">Opšti uslovi poslovanja</a></li>
+                    <li><a href="#">Dali ste znali?</a></li>
+                    <li><a href="#">Uslovi korišcenja</a></li>
+                    <li><a href="#">Korisni linkovi</a></li>
+                </ul>
+            </div>
+            <div class="sec3">
+                <h1>Stranice</h1>
+                <ul>
+                    <li><a href="onama.html">O nama</a></li>
+                    <li><a href="kontakt.html">Usluge</a></li>
+                    <li><a href="prijavazaposao.html">Prijave za posao</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2025 Malešević d.o.o. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

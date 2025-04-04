@@ -185,9 +185,6 @@ nav .navElements ul {
     align-items: end;
     flex:1;
 }
-.herosec .sidetext {
-    display: flex;
-}
 
 
 .herosec .sidetext p {
@@ -216,18 +213,13 @@ nav .navElements ul {
 
 .prioritetisection .sidetext p{
     font-size: 24px;
-    width: 585px;
+    font-weight: 500;
 }
 
 .prioritetisection .sidetext p span{
     color: #B76161;
 }
 
-.prioritetisection .sideimage {
-    pointer-events: none;
-    user-select: none;
-    width: 460px;
-}
 
 .section2 {
     background-image: 
@@ -415,9 +407,6 @@ nav .navElements ul {
         width: 60%;
         margin-right:100px;
     }
-    .prioritetisection .sidetext p{
-        width: 450px !important;
-    }
     
 }
 
@@ -425,7 +414,6 @@ nav .navElements ul {
 @media screen and (max-width: 640px) {
     .prioritetisection .sidetext p {
         font-size: 20px;
-        width:500px;
     }
 }
 
@@ -473,41 +461,5 @@ nav .navElements ul {
     }
     .section3 {
         padding:20px 0;
-    }
-}
-
-
-
-/* Default: Extra-small devices such as small phones (less than 640px) */
-
-/* Small devices such as large phones (640px and up) */
-@media only screen and (min-width: 640px) {
-    .prioritetisection .sidetext,
-    .prioritetisection .sideimage {
-        width: calc(100%-40%)
-    }
-}
-
-/* Medium devices such as tablets (768px and up) */
-@media only screen and (min-width: 768px) {
-    .prioritetisection .sidetext,
-    .prioritetisection .sideimage {
-        width: calc(100%-20%)
-    }
-}
-
-/* Large devices such as laptops (1024px and up) */
-@media only screen and (min-width: 1024px) {
-    .prioritetisection .sidetext,
-    .prioritetisection .sideimage {
-        width: calc(100%-15%)
-    }
-}
-
-/* Largest devices such as desktops (1280px and up) */
-@media only screen and (min-width: 1280px) {
-    .prioritetisection .sidetext,
-    .prioritetisection .sideimage {
-        width: calc(100%-5%)
     }
 }

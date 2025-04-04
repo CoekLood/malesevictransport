@@ -453,13 +453,19 @@ nav .navElements ul {
     .section3 .container {
         grid-template-columns: 1fr; 
     }
-    .footer img {
-        width: 200px;
-    }
     .section3 .card{
         margin:0;
     }
     .section3 {
         padding:20px 0;
+    }
+    .footer .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    .footer .sec1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 }

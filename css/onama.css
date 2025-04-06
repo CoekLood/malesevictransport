@@ -6,12 +6,23 @@
 }
 
 body{
-    background-color: gray;
-    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    font-family: "Montserrat", sans-serif !important;
     height:100%;
-    width:100%;
     overflow-x: hidden;
-    min-width: 600px;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #e0e0e0;
+}
+body::-webkit-scrollbar{
+    width: 12px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #888;
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
 }
 
 .burgerMenu {
@@ -96,7 +107,7 @@ nav {
     margin-top: 50px;
     padding: 0 40px;
     border-radius: 20px;
-    min-width: 100px;
+    min-width: 350px;
 
 }
 .logo{
@@ -106,18 +117,7 @@ nav {
 nav .navElements {
     margin-top:20px;
 }
-nav .navElements ul {
-    text-decoration: none;
-    list-style-type: none;
-    display: flex;
-    gap:60px;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-size: 22px;
-    color: #612828;
-    overflow: hidden;
-    padding-bottom:5px;
-}
+
 
 .navElements ul li {
     cursor: pointer;
@@ -174,24 +174,38 @@ nav .navElements ul {
     filter: brightness(0.5);
     z-index: -1;
 }
-.herosec .sidetext {
+nav .navElements ul {
+    text-decoration: none;
+    list-style-type: none;
     display: flex;
-    justify-content: flex-end;
-    margin-right:100px;
+    gap:60px;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 22px;
+    color: #612828;
+    overflow: hidden;
+    padding-bottom:5px;
 }
 .herosec .container {
-    margin:auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    flex:1;
 }
+
 .herosec .sidetext p {
     color:white;
     background-color: #B76161;
     font-size: 40px;
     font-weight: 500;
-    padding:30px 45px;
+    padding:20px 40px;
     max-width: 450px;
     border-radius: 20px;
     text-align: center;
+    margin-bottom:80px;
 }
+
 
 .section2 {
     padding: 100px 0;
@@ -217,7 +231,7 @@ nav .navElements ul {
     margin-top:80px;
   }
   
-.col-md6 {
+.section2 .col-md-6 {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centers content vertically */
@@ -276,7 +290,7 @@ span {
 }
 
 .section4 {
-    padding: 120px 50px;
+    padding: 120px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -284,9 +298,13 @@ span {
 .section4 img {
     user-select: none;
     pointer-events: none;
+    margin-right: 150px;
 }
 .section4 p{
     font-size: 22px;
+}
+.section4 .sidetext {
+    padding-left:40px;
 }
 
 .footer {
@@ -327,6 +345,7 @@ span {
 .footer .img {
     user-select: none;
     pointer-events: none;
+    margin-bottom:-35px;
 }
 
 .footer .copyright p{
@@ -334,4 +353,104 @@ span {
     margin: 60px 0 0 0;
     text-align: center;
     font-size: 15px;
+}
+
+@media screen and (max-width: 825px) {
+    nav .navElements {
+        display: none;
+    }
+    nav .burgerMenu {
+        display: flex;
+    }
+    .burgerIcon {
+        display: inline-block;
+    }
+    .herosec .sidetext {
+        align-items: center;
+    }
+    .herosec .sidetext p {
+        max-width: 300px;
+        font-size: 32px;
+        margin-right:20px;
+    }
+    nav{
+        width:70%;
+    }
+}
+@media screen and (max-width: 768px){
+    .footer p,
+    .footer ul li {
+        font-size: 14px; /* Adjust the font size as needed */
+    }
+    .footer h1{
+        font-size: 20px;
+    }
+    .footer {
+        padding-top:80px;
+    }
+    .footer img {
+        width:200px;
+    }
+    .section3 h1 {
+        font-size: 40px;
+    }
+    .levitekst p,
+    .desnitekst p{
+        font-size:18px;;
+    }
+    .section4 .col-md-6 {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .section3 h1 {
+        font-size: 25px !important;
+    }
+    .levitekst p,
+    .desnitekst p{
+        font-size: 15px !important;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .footer .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    .footer .sec1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .section4 .row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .section4 .col-md-6{
+        width: 70%;
+    }
+    .section4 .col-md-6:nth-child(1){
+        margin-bottom: 25px;
+    }
+    .section4 p{
+        text-align: center;
+    }
+} 
+
+@media only screen and (max-width: 1024px) {
+    .section2 .row {
+        display: flex;
+        flex-direction: column;
+      }
+    .section2 .col-md-6 {
+        width: 100%; /* Both columns take full width */
+        margin-bottom: 20px; /* Optional: adds spacing between the text and image */
+    }
+
+    .section2 .col-md-6 img {
+        width: 100%; /* Make sure the image is responsive */
+        height: auto; /* Ensure the image retains its aspect ratio */
+    }
 }

@@ -6,14 +6,25 @@
 }
 
 body{
-    background-color: gray;
-    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    font-family: "Montserrat", sans-serif !important;
     height:100%;
-    width:100%;
     overflow-x: hidden;
-    min-width: 600px;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #e0e0e0;
 }
 
+body::-webkit-scrollbar{
+    width: 12px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #888;
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+}
 .burgerMenu {
     position: fixed;
     top: 0;
@@ -96,7 +107,7 @@ nav {
     margin-top: 50px;
     padding: 0 40px;
     border-radius: 20px;
-    min-width: 100px;
+    min-width: 350px;
 
 }
 .logo{
@@ -174,14 +185,15 @@ nav .navElements ul {
     filter: brightness(0.5);
     z-index: -1;
 }
-.herosec .sidetext {
-    display: flex;
-    justify-content: flex-end;
-    margin-right:100px;
-}
+
 .herosec .container {
-    margin:auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    flex:1;
 }
+
 .herosec .sidetext p {
     color:white;
     background-color: #B76161;
@@ -191,8 +203,8 @@ nav .navElements ul {
     max-width: 450px;
     border-radius: 20px;
     text-align: center;
+    margin-bottom:80px;
 }
-
 .section2 {
     color:black;
     background-color: white;
@@ -265,6 +277,15 @@ nav .navElements ul {
 .section3 .lUsluge {
     margin:50px 0;
 }
+.section3 .dTransport .col-md-4,
+.section3 .lUsluge .col-md-4 {
+    display: flex;
+    justify-content: end;
+}
+.section3 .sTransport .col-md-4{
+    display: flex;
+    justify-content: start;
+}
 
 .footer {
     background-color: #B76161;
@@ -312,4 +333,81 @@ nav .navElements ul {
     margin: 60px 0 0 0;
     text-align: center;
     font-size: 15px;
+}
+@media screen and (max-width: 825px) {
+    nav .navElements {
+        display: none;
+    }
+    nav .burgerMenu {
+        display: flex;
+    }
+    .burgerIcon {
+        display: inline-block;
+    }
+    .herosec .sidetext {
+        align-items: center;
+    }
+    .herosec .sidetext p {
+        max-width: 300px;
+        font-size: 32px;
+        margin-right:20px;
+    }
+    nav{
+        width:70%;
+    }
+}
+@media only screen and (max-width: 768px){
+    .footer p,
+    .footer ul li {
+        font-size: 14px; /* Adjust the font size as needed */
+    }
+    .footer h1{
+        font-size: 20px;
+    }
+    .footer {
+        padding-top:80px;
+    }
+    .footer img {
+        width:200px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .footer .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    .footer .sec1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .section3 .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section3 .col-md-7{
+        justify-content: center !important;
+        width: 100%; 
+    }
+    .section3 .col-md-4 {
+        justify-content: center !important;
+        align-items: center;
+        width: 100%;
+    }
+    .section3 .container h1,
+    .section3 .container p {
+        text-align: center;
+    }
+    .section3 .row.sTransport .col-md-4 {
+        order: 2;
+    }
+    
+    .section3 .row.sTransport .col-md-7 {
+        order: 1;
+    }
 }

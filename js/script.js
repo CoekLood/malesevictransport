@@ -56,3 +56,49 @@ function handleResize() {
 }
 // Listen for window resize and run handleResize function
 window.addEventListener('resize', handleResize);
+
+document.addEventListener("DOMContentLoaded", function() {
+  const touElement = document.querySelector('.tou');
+  const body = document.body;
+
+  // Check if the user has already agreed using cookies
+  const isAgreed = getCookie("termsAgreement") === "true";
+
+  // If user has not agreed, show the TOU modal and overlay
+  if (!isAgreed) {
+    body.classList.add('overlay-visible');  // Show the modal and overlay
+    body.classList.add('no-scroll'); // Disable scrolling
+    touElement.style.display = 'block'; // Display the TOU modal
+  } else {
+    // If user has agreed, hide the modal and overlay
+    touElement.style.display = 'none'; // Hide the TOU modal
+    body.classList.remove('overlay-visible');
+    body.classList.remove('no-scroll'); // Enable scrolling
+  }
+
+  // If the user agrees to the terms
+  window.agreement = function() {
+    setCookie("termsAgreement", "true", 30); // Set cookie for 30 days
+    body.classList.remove('overlay-visible'); // Hide the modal and overlay
+    body.classList.remove('no-scroll'); // Enable scrolling
+    touElement.style.display = 'none'; // Hide the TOU modal
+  };
+});
+
+// Function to set cookies
+function setCookie(name, value, days) {
+  const date = new Date();
+  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Add the days to the current date
+  document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+}
+
+// Function to get cookies
+function getCookie(name) {
+  const value = `${name}=`;
+  const cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    let c = cookies[i].trim();
+    if (c.indexOf(value) === 0) return c.substring(value.length, c.length);
+  }
+  return "";
+}

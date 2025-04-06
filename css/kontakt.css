@@ -5,15 +5,27 @@
     scroll-behavior: smooth;
 }
 
+
 body{
-    background-color: gray;
-    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    font-family: "Montserrat", sans-serif !important;
     height:100%;
-    width:100%;
     overflow-x: hidden;
-    min-width: 600px;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #e0e0e0;
 }
 
+body::-webkit-scrollbar{
+    width: 12px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #888;
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+}
 .burgerMenu {
     position: fixed;
     top: 0;
@@ -68,7 +80,7 @@ body{
     cursor: pointer;
   }
   
-  .bar1, .bar2, .bar3 {
+.bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
     background-color: #333;
@@ -76,13 +88,13 @@ body{
     transition: 0.4s;
   }
   
-  .change .bar1 {
+.change .bar1 {
     transform: translate(0, 11px) rotate(-45deg);
   }
   
-  .change .bar2 {opacity: 0;}
+.change .bar2 {opacity: 0;}
   
-  .change .bar3 {
+.change .bar3 {
     transform: translate(0, -11px) rotate(45deg);
   }
 nav {
@@ -96,7 +108,7 @@ nav {
     margin-top: 50px;
     padding: 0 40px;
     border-radius: 20px;
-    min-width: 100px;
+    min-width: 350px;
 
 }
 .logo{
@@ -174,23 +186,25 @@ nav .navElements ul {
     filter: brightness(0.5);
     z-index: -1;
 }
-.herosec .sidetext {
-    display: flex;
-    justify-content: flex-end;
-    margin-right:100px;
-}
 .herosec .container {
-    margin:auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    flex:1;
 }
+
+
 .herosec .sidetext p {
     color:white;
     background-color: #B76161;
     font-size: 40px;
     font-weight: 500;
-    padding:20px 40px;
+    padding:20px 0;
     max-width: 450px;
     border-radius: 20px;
     text-align: center;
+    margin-bottom:80px;
 }
 
 .forma {
@@ -347,6 +361,9 @@ nav .navElements ul {
     background-color: #A14E4E;    /* Color of the vertical line */
     z-index: 1;                   /* Ensure the line is above the background */
 }
+.contact-form {
+    display: flex;
+}
 
 .footer {
     background-color: #B76161;
@@ -395,19 +412,74 @@ nav .navElements ul {
     text-align: center;
     font-size: 15px;
 }
-
 /* Change autocomplete styles in WebKit */
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
+textarea:-webkit-autofill:focus {
   -webkit-text-fill-color: none;
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
-};
+}
+@media screen and (max-width: 825px) {
+    nav .navElements {
+        display: none;
+    }
+    nav .burgerMenu {
+        display: flex;
+    }
+    .burgerIcon {
+        display: inline-block;
+    }
+    .herosec .sidetext {
+        align-items: center;
+    }
+    .herosec .sidetext p {
+        max-width: 300px;
+        font-size: 32px;
+        margin-right:20px;
+    }
+    nav{
+        width:70%;
+    }
+}
+@media screen and (max-width: 768px){
+    .footer p,
+    .footer ul li {
+        font-size: 14px; /* Adjust the font size as needed */
+    }
+    .footer h1{
+        font-size: 20px;
+    }
+    .footer {
+        padding-top:80px;
+    }
+    .footer img {
+        width:200px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .footer .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    .footer .sec1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .forma .col-md-6 { 
+        width: 100%;
 
+    }
+    .forma .row::before {
+        display: none;
+    }
+    .forma .submitBtn {
+        margin-left: 90px;
+    }
+}
